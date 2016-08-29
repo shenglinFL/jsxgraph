@@ -3907,12 +3907,12 @@ define([
          * @returns {JXG.Board} Reference to the board
          */
         pauseAllAnimation: function (){
-            for(var i in board.animationObjects){
-                this.tempAnimationObjects.push(board.animationObjects[i])
+            for(var i in this.animationObjects){
+                this.tempAnimationObjects.push(this.animationObjects[i])
             }
-            this.stopAllAnimation(); 
+            this.stopAllAnimation();
 
-            return this;   
+            return this;
         },
 
         /**
@@ -3923,13 +3923,7 @@ define([
             for(var i in this.tempAnimationObjects){
                 this.addAnimation(this.tempAnimationObjects[i]);
             }
-            var arr = [];
-            arr.push='255';
-            arr.push='255';
-            arr.push='0';
-            this.create("text",[1,1,"abcdafdfasd"],{color:'rgb(255, 0, 0)'});
-
-            return this; 
+            return this;
         },
 
         /**
